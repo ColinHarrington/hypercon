@@ -14,7 +14,7 @@ import java.beans.Transient;
 /**
  * Created by Fabian on 22.02.2015.
  *
- * A frame to print ssh traffic
+ * A frame to print org.hyperion.ssh traffic
  */
 public class SSHTrafficPrinterFrame extends JFrame implements ConnectionListener{
 
@@ -61,7 +61,7 @@ public class SSHTrafficPrinterFrame extends JFrame implements ConnectionListener
 
         SshConnectionModel.getInstance().addConnectionListener(this);
 
-        setIconImage(new ImageIcon(Main.class.getResource("HyperConIcon_64.png")).getImage());
+        setIconImage(new ImageIcon(Main.class.getClassLoader().getResource("HyperConIcon_64.png")).getImage());
         setLayout(new BorderLayout());
 
 
@@ -98,20 +98,20 @@ public class SSHTrafficPrinterFrame extends JFrame implements ConnectionListener
 
     @Override
     public void connected() {
-        txtArea.append("ssh connected\n");
+        txtArea.append("org.hyperion.ssh connected\n");
         txtArea.setCaretPosition(txtArea.getDocument().getLength());
     }
 
     @Override
     public void disconnected() {
-        txtArea.append("ssh disconnected\n");
+        txtArea.append("org.hyperion.ssh disconnected\n");
         txtArea.setCaretPosition(txtArea.getDocument().getLength());
 
     }
 
     @Override
     public void commandExec(String pCommand) {
-        txtArea.append("ssh out: \t" + pCommand + "\n");
+        txtArea.append("org.hyperion.ssh out: \t" + pCommand + "\n");
         txtArea.setCaretPosition(txtArea.getDocument().getLength());
 
 
@@ -144,15 +144,15 @@ public class SSHTrafficPrinterFrame extends JFrame implements ConnectionListener
     }
     @Override
     public void addLine(String pLine) {
-        txtArea.append("ssh in: \t" + pLine + "\n");
+        txtArea.append("org.hyperion.ssh in: \t" + pLine + "\n");
         txtArea.setCaretPosition(txtArea.getDocument().getLength());
 
     }
 
     @Override
     public void addError(String pLine) {
-    	txtArea.append("ssh out: \t" + pLine + "\n");
-//      txtArea.append("ssh error: \t" + pLine + "\n");
+    	txtArea.append("org.hyperion.ssh out: \t" + pLine + "\n");
+//      txtArea.append("org.hyperion.ssh error: \t" + pLine + "\n");
         txtArea.setCaretPosition(txtArea.getDocument().getLength());
 
 

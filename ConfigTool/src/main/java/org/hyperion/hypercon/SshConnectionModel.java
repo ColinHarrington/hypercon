@@ -9,7 +9,6 @@ import org.hyperion.ssh.PiSshConnection;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Observable;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Fabian Hertwig
@@ -345,7 +344,7 @@ DEPRECATED 	-Y, --correction <arg>       Set the color correction of the leds (r
 		@Override
 		public void commandExec(String pCommand) {
 			if(printTraffic){
-				System.out.println("ssh: $ " + pCommand); 
+				System.out.println("org.hyperion.ssh: $ " + pCommand);
 			}
 		}
 
@@ -374,14 +373,14 @@ DEPRECATED 	-Y, --correction <arg>       Set the color correction of the leds (r
 		@Override
 		public void addLine(String pLine) {
 			if(printTraffic){
-				System.out.println("ssh: " + pLine); 
+				System.out.println("org.hyperion.ssh: " + pLine);
 			}
 		}
 
 		@Override
 		public void addError(String pLine) {
 			if(printTraffic){
-				System.out.println("ssh Error: " + "\u001B[31m" + pLine);
+				System.out.println("org.hyperion.ssh Error: " + "\u001B[31m" + pLine);
 			}
 
 		}
@@ -389,7 +388,7 @@ DEPRECATED 	-Y, --correction <arg>       Set the color correction of the leds (r
 		@Override
 		public void connected() {
 			if(printTraffic){
-				System.out.println("ssh connected");
+				System.out.println("org.hyperion.ssh connected");
 			}
 			super.connected();
 		}
@@ -397,7 +396,7 @@ DEPRECATED 	-Y, --correction <arg>       Set the color correction of the leds (r
 		@Override
 		public void disconnected() {
 			if(printTraffic){
-				System.out.println("ssh disconnected"); 
+				System.out.println("org.hyperion.ssh disconnected");
 			}
 			super.disconnected();
 		}

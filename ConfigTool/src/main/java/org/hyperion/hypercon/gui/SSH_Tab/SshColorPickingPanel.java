@@ -184,7 +184,7 @@ public class SshColorPickingPanel extends JPanel implements Observer, PropertyCh
 	
 	
 	/**
-	 * is called when the ssh connection status changes
+	 * is called when the org.hyperion.ssh connection status changes
 	 */
 	@Override
 	public void update(Observable arg0, Object arg1) {

@@ -25,7 +25,7 @@ public class SshColorTransformPanel extends JPanel implements Observer {
 	}
 	
 	private void initialise(){
-//		setBorder(BorderFactory.createTitledBorder(language.getString("process.ssh.title"))); //$NON-NLS-1$
+//		setBorder(BorderFactory.createTitledBorder(language.getString("process.org.hyperion.ssh.title"))); //$NON-NLS-1$
 
 		sendTransform = new JButton(language.getString("process.ssh.sendcolortransformlabel")); //$NON-NLS-1$
 		sendTransform.setToolTipText(language.getString("process.ssh.sendcolortransformtooltip")); //$NON-NLS-1$
@@ -58,7 +58,7 @@ public class SshColorTransformPanel extends JPanel implements Observer {
 	}
 
 	/**
-	 * is called when the ssh connection status changes
+	 * is called when the org.hyperion.ssh connection status changes
 	 */
 	@Override
 	public void update(Observable arg0, Object arg1) {

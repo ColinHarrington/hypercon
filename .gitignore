@@ -2,7 +2,7 @@
 .idea/
 ConfigTool/hypercon.dat
 ConfigTool/src/META-INF/MANIFEST.MF
-ConfigTool/ConfigTool.iml
+*.iml
 
 # Gradle ignores
 .gradle

@@ -6,7 +6,6 @@ import java.io.File;
 
 import javax.swing.*;
 
-import org.hyperion.hypercon.JavaVersion;
 import org.hyperion.hypercon.gui.ConfigPanel;
 import org.hyperion.hypercon.gui.SSH_Tab.SSHTrafficPrinterFrame;
 import org.hyperion.hypercon.language.language;
@@ -57,7 +56,8 @@ public class Main {
 		frame.setTitle(title);
 		frame.setSize(1400, 800);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.setIconImage(new ImageIcon(Main.class.getResource("HyperConIcon_64.png")).getImage());
+
+		frame.setIconImage(new ImageIcon(Main.class.getClassLoader().getResource("HyperConIcon_64.png")).getImage());
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {

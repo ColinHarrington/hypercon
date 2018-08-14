@@ -41,7 +41,7 @@ public class LedSimulationComponent extends JPanel {
 		mTvImage.createGraphics().drawImage(pImage, 0, 0, mTvImage.getWidth(), mTvImage.getHeight(), null);
 	}
 	{
-		Image image = new ImageIcon(LedSimulationComponent.class.getResource("TestImage_01.png")).getImage(); 
+		Image image = new ImageIcon(LedSimulationComponent.class.getClassLoader().getResource("LedSimulation/TestImage_01.png")).getImage();
 		mTvImage.createGraphics().drawImage(image, 0, 0, mTvImage.getWidth(), mTvImage.getHeight(), null);
 	}
 
@@ -392,7 +392,7 @@ public class LedSimulationComponent extends JPanel {
 		}
 		
 		ImageIcon loadImage() {
-			URL imageUrl = LedSimulationComponent.class.getResource(mImageName + ".png"); 
+			URL imageUrl = LedSimulationComponent.class.getClassLoader().getResource(mImageName + ".png");
 			if (imageUrl == null) {
 				System.out.println(language.getString("general.failedtoloadimagelabel") + mImageName); 
 				return null;

@@ -260,7 +260,7 @@ public class PiSshConnection {
 				@Override
 				public void commandExec(String pCommand) {
 					if(printTraffic){
-						System.out.println("ssh: $ " + pCommand);
+						System.out.println("org.hyperion.ssh: $ " + pCommand);
 					}
 				}
 
@@ -286,14 +286,14 @@ public class PiSshConnection {
 				@Override
 				public void addLine(String pLine) {
 					if(printTraffic){
-						System.out.println("ssh: " + pLine);
+						System.out.println("org.hyperion.ssh: " + pLine);
 					}
 				}
 
 				@Override
 				public void addError(String pLine) {
 					if(printTraffic){
-						System.out.println("ssh Error: " + "\u001B[31m" + pLine);
+						System.out.println("org.hyperion.ssh Error: " + "\u001B[31m" + pLine);
 					}
 
 				}
@@ -301,7 +301,7 @@ public class PiSshConnection {
 				@Override
 				public void connected() {
 					if(printTraffic){
-						System.out.println("ssh connected");
+						System.out.println("org.hyperion.ssh connected");
 					}
 					super.connected();
 				}
@@ -309,7 +309,7 @@ public class PiSshConnection {
 				@Override
 				public void disconnected() {
 					if(printTraffic){
-						System.out.println("ssh disconnected");
+						System.out.println("org.hyperion.ssh disconnected");
 					}
 					super.disconnected();
 				}

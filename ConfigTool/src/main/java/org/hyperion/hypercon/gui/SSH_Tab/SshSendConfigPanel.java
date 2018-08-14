@@ -143,7 +143,7 @@ public class SshSendConfigPanel extends JPanel implements Observer {
         			sshConnection.sendConfig(mSshConfig.srcPath,mSshConfig.FileName);
         		} 
         		catch (SftpException | JSchException e1) {
-		  //      	JOptionPane.showMessageDialog(new JFrame(), language.getString("ssh.sshsendconfig.confuploadfailedMessage"), language.getString("general.HyperConErrorDialogTitle"),
+		  //      	JOptionPane.showMessageDialog(new JFrame(), language.getString("org.hyperion.ssh.sshsendconfig.confuploadfailedMessage"), language.getString("general.HyperConErrorDialogTitle"),
 		  //TODO:Move to lower stage for error exception      		        JOptionPane.ERROR_MESSAGE);
                 }	
         	}
